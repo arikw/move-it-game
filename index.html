@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Mouse Movement Game</title>
+  <style>
+    html,
+    body {
+      height: 100%;
+      margin: 0;
+      overflow: hidden;
+    }
+
+    #cheese {
+      position: absolute;
+      font-size: 50px;
+    }
+
+    #mouse {
+      position: absolute;
+      background-color: transparent;
+      border: none;
+      pointer-events: none;
+      font-size: 100px;
+      top: calc(50vh - 50px);
+      left: calc(50vw - 50px);
+    }
+
+    .collision-zone {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      top: 0;
+      left: 0;
+      margin: 35%;
+    }
+
+    body {
+      cursor: none;
+      user-select: none;
+      background-color: #eee;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="cheese">🧀<div class="collision-zone"></div></div>
+  <div id="mouse">🐭<div class="collision-zone"></div></div>
+  <script src="src/index.js"></script>
+</body>
+
+</html>
