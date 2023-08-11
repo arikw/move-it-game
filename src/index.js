@@ -70,6 +70,9 @@ document.addEventListener('keydown', function (e) {
   onMousePositionChanged();
 });
 
+// prevent right click menu
+document.addEventListener('contextmenu', event => event.preventDefault());
+
 function isCollide(a, b) {
   return !(
     ((a.y + a.height) < (b.y)) || (a.y > (b.y + b.height)) ||
